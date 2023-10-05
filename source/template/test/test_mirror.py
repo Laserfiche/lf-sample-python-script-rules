@@ -10,3 +10,4 @@ def test_your_script_method(input_value):
     actual_output = YourScriptMethod(inputs)
 
     assert actual_output == expected_output
+
