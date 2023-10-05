@@ -1,5 +1,5 @@
 import pytest
-from ..lf_arg_parser import get_argument_map
+from ..src.lf_arg_parser import get_argument_map
 
 
 @pytest.mark.parametrize("commands, expected", [
