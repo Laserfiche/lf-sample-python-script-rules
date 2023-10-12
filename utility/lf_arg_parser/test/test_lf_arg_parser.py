@@ -3,13 +3,13 @@ from ..src.lf_arg_parser import get_argument_map
 
 
 @pytest.mark.parametrize("commands, expected", [
-    (['node.exe', './some/path/script.js', 'k1=v1'], {'k1': 'v1'}),
-    (['node.exe', './some/path/script.js', 'k1=v1', 'k2=v2'], {'k1': 'v1', 'k2': 'v2'}),
-    (['node.exe', './some/path/script.js', 'k1=v1', 'k2='], {'k1': 'v1', 'k2': ''}),
-    (['node.exe', './some/path/script.js', 'k1=a"bc'], {'k1': 'a"bc'}),
-    (['node.exe', './some/path/script.js', 'k1=""'], {'k1': '""'}),
-    (['node.exe', './some/path/script.js', '="abc"', 'k2=v2'], {'k2': 'v2'}),
-    (['node.exe', './some/path/script.js'], {}),
+    (['python', './some/path/script.py', 'k1=v1'], {'k1': 'v1'}),
+    (['python', './some/path/script.py', 'k1=v1', 'k2=v2'], {'k1': 'v1', 'k2': 'v2'}),
+    (['python', './some/path/script.py', 'k1=v1', 'k2='], {'k1': 'v1', 'k2': ''}),
+    (['python', './some/path/script.py', 'k1=a"bc'], {'k1': 'a"bc'}),
+    (['python', './some/path/script.py', 'k1=""'], {'k1': '""'}),
+    (['python', './some/path/script.py', '="abc"', 'k2=v2'], {'k2': 'v2'}),
+    (['python', './some/path/script.py'], {}),
 ])
 def test_get_argument_map(commands, expected):
     """
