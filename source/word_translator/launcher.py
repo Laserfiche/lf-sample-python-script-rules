@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import sys
-sys.path.append('../..')  # add root to PythonPath
 
 from utility.lf_arg_parser.src.lf_arg_parser import get_argument_map
 from src.translator import translate
