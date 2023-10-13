@@ -7,6 +7,7 @@ Scripts are invoked by **Laserfiche Remote Agent** which is a service installed 
 ## Prerequisites
 
 - [Python 3.6 or later](https://www.python.org/downloads/)
+  - If your windows login user is different than the user running the remote agent, you need to install Python for all users.
 - [Visual Studio Code v1.80 or later](https://code.visualstudio.com/download)
 - [A Laserfiche Cloud Account](https://www.laserfiche.com/signon/)
 - [Creating a Python Script Documentation](https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Rules/pythonscript.htm?TocPath=Process%2520Automation%257CRules%257CGetting%2520Started%2520With%2520Scripts%257C_____2)
@@ -29,9 +30,15 @@ This project is using a mono-repo structure with multiple packages. Please refer
 ## Deployment
  - Copy the whole repo into the remote agent folder
     - e.g., `C:\Program Files\Laserfiche\Server\RemoteAgent\ScriptRunner\Python\lf-sample-python-script-rules`
- - Add the remote agent location into the **PYTHONPATH**
-   ```python
-   import os
-   os.environ['PYTHONPATH'] = r'C:\Program Files\Laserfiche\Server\RemoteAgent\ScriptRunner\Python\lf-sample-python-script-rules'
-   ```
+ 
+ - Add the destination folder into the **PYTHONPATH** environment variable
+   - if your windows login user is different than the user running the remote agent, you need to add the environment variable to `System variables`.
+   - ```python
+     import os
+     os.environ['PYTHONPATH'] = r'C:\Program Files\Laserfiche\Server\RemoteAgent\ScriptRunner\Python\lf-sample-python-script-rules'
+     ```
+
  - Install dependencies: `pip install -r requirements.txt`
+   - If your windows login user is different than the user running the remote agent, you need to make `pip install` to install dependencies for all the user. 
+   - e.g, `pip install --target="C:\Program Files\Python312\Lib\site-packages" -r requirements.txt`
+   - Please update the `--target` based on your python installation folder.

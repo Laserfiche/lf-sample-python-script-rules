@@ -1,15 +1,11 @@
 # Laserfiche Python Rule script Template project
+
 This project is a template for creating a Laserfiche Python Rule script project. It contains a sample script that can be used as a starting point for creating your own script.
 
 ## Deploy script to your remote agent
-- Copy the whole repo into the remote agent folder
-    - e.g., `C:\Program Files\Laserfiche\Server\RemoteAgent\ScriptRunner\Python\lf-sample-python-script-rules`
-- Add the remote agent location into the **PYTHONPATH**
-  ```python
-  import os
-  os.environ['PYTHONPATH'] = r'C:\Program Files\Laserfiche\Server\RemoteAgent\ScriptRunner\Python\lf-sample-python-script-rules'
-  ```
-  
+
+Refer to the [Deployment](../../README.md#deployment) for details.
+
 ## Configure and test this script rule in your Laserfiche Cloud Account -> Process Automation -> Rules
 
 Create a new rule:
