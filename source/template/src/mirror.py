@@ -1,4 +1,7 @@
-def YourScriptMethod(inputs: dict[str, str]) -> dict[str, str]:
+from typing import Dict
+
+
+def YourScriptMethod(inputs: Dict[str, str]) -> Dict[str, str]:
     """
     The main function for your script.
 
@@ -9,7 +12,7 @@ def YourScriptMethod(inputs: dict[str, str]) -> dict[str, str]:
     """
 
     # Retrieve your input parameters from process.argv after parser
-    outputs: dict[str, str] = {}
+    outputs: Dict[str, str] = {}
     for key, value in inputs.items():
         outputs[key] = value
 
