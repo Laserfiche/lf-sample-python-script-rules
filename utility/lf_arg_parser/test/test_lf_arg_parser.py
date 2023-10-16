@@ -1,3 +1,6 @@
+# Copyright (c) Laserfiche.
+# Licensed under the MIT License. See LICENSE in the project root for license information.
+
 import pytest
 from ..src.lf_arg_parser import get_argument_map
 

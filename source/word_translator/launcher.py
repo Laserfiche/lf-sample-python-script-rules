@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+# Copyright (c) Laserfiche.
+# Licensed under the MIT License. See LICENSE in the project root for license information.
+
 import sys
 
 from utility.lf_arg_parser.src.lf_arg_parser import get_argument_map
