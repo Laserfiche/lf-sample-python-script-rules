@@ -1,5 +1,3 @@
-GitHub Copilot: Certainly! Here's an updated `README.md` file for the `template` package:
-
 # template
 
 `template` is a Python package that provides a template for creating Python scripts that can be run on remote agent.
